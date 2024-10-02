@@ -1,0 +1,15 @@
+hidden=[".config"]
+modules = ["web", "nodejs-20"]
+run = "npx serve ."
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+publicDir = "/"
+deploymentTarget = "static"
+run = ["sh", "-c", "npx serve ."]
+
+[[ports]]
+localPort = 3000
+externalPort = 80
