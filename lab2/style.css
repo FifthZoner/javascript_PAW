@@ -2,3 +2,18 @@ html {
   height: 100%;
   width: 100%;
 }
+.userId {
+  color : salmon;
+  font-family: "JetBrains Mono";
+}
+.id {
+  color : darkslategrey;
+}
+.title {
+  background-color : silver;
+  color : forestgreen;
+  font-size : xx-large;
+}
+.body {
+  background-color : lawngreen;
+}

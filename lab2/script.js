@@ -23,10 +23,10 @@
           .then(array => {
               console.log(array);
               answer.innerHTML = "";
-              answer.innerHTML += "Id użytkownika: " + JSON.stringify(array.userId) + "    ";
-              answer.innerHTML += "Id: " + JSON.stringify(array.id) + "<br>";
-              answer.innerHTML += "Tytuł: " + JSON.stringify(array.title) + "<br>";
-              answer.innerHTML += "Treść: " + JSON.stringify(array.body) + "<br><br>";
+              answer.innerHTML += "<b class = 'userId'>Id użytkownika: " + JSON.stringify(array.userId) + "</b>    ";
+              answer.innerHTML += "<b class = 'id'>Id: " + JSON.stringify(array.id) + "</b><br>";
+              answer.innerHTML += "<b class = 'title'>Tytuł: " + JSON.stringify(array.title) + "</b><br>";
+              answer.innerHTML += "<b class = 'body'>Treść: " + JSON.stringify(array.body) + "</b><br><br>";
           })
   })
 
