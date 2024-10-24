@@ -31,7 +31,27 @@
   })
 
   cw2.addEventListener("click", function () {
-    //TODO
+      answer.innerHTML = "Processing...";
+      const post = {
+          userId : 1,
+          title : "Tytułuł",
+          body : "ciałoło"
+      }
+
+      fetch('https://jsonplaceholder.typicode.com/posts', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json; charset=UTF-8',
+          },
+          body: JSON.stringify(post),
+      })
+          .then(res => res.json())
+          .then(data => {
+              answer.innerHTML = "Dodano nowy post o ID = " + data.id;
+          })
+          .catch(error => {
+              answer.innerHTML = "Nie udało się dodać postu!";
+          });
   })
 
   cw3.addEventListener("click", function () {
