@@ -17,3 +17,18 @@ html {
 .body {
   background-color : lawngreen;
 }
+#loadingPopUp {
+  position : fixed;
+  display : flex;
+  justify-content : center;
+  align-items : center;
+  width : 90%;
+  height : 75%;
+  top : 12.5%;
+  left : 2.5%;
+  background-color : lightblue;
+  font-size : 60px;
+  border-color : goldenrod;
+  border-width : 25px;
+  border-style : groove;
+}
