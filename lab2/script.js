@@ -16,18 +16,18 @@
 
   cw1.addEventListener("click", function () {
       answer.innerHTML = "Loading...";
-    fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(response => response.json())
-        .then(array => {
-            console.log(array);
-            answer.innerHTML = "";
-            array.forEach(n =>{
-                answer.innerHTML += "Id użytkownika: " + JSON.stringify(n.userId) + "    ";
-                answer.innerHTML += "Id: " + JSON.stringify(n.id) + "<br>";
-                answer.innerHTML += "Tytuł: " + JSON.stringify(n.title) + "<br>";
-                answer.innerHTML += "Treść: " + JSON.stringify(n.body) + "<br><br>";
-            })
-        })
+      const number = 1; // TODO: zrobić to może dynamicznie
+      const address = "https://jsonplaceholder.typicode.com/posts/" + number.toString();
+      fetch(address)
+          .then(response => response.json())
+          .then(array => {
+              console.log(array);
+              answer.innerHTML = "";
+              answer.innerHTML += "Id użytkownika: " + JSON.stringify(array.userId) + "    ";
+              answer.innerHTML += "Id: " + JSON.stringify(array.id) + "<br>";
+              answer.innerHTML += "Tytuł: " + JSON.stringify(array.title) + "<br>";
+              answer.innerHTML += "Treść: " + JSON.stringify(array.body) + "<br><br>";
+          })
   })
 
   cw2.addEventListener("click", function () {
